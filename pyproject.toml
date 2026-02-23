@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indicator-vault"
+version = "0.1.0"
+description = "Deterministic Pine Script indicator warehouse and ingestion pipeline"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.1",
+  "numpy>=1.25",
+  "duckdb>=1.0",
+  "pyarrow>=15.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "indicator_vault"}
+
+[tool.setuptools.packages.find]
+where = ["indicator_vault"]
